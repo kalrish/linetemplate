@@ -1,3 +1,5 @@
+% These dimensions are defined in base.ini.
+% Here, they get set to the values specified in the tup.config. The patterns are replaced by the tup varsed command.
 \pageheight=@PAGE_HEIGHT@
 \pagewidth=@PAGE_WIDTH@
 \paperheight=@PAPER_HEIGHT@
