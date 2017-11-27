@@ -1,0 +1,51 @@
+\def\setlinedpage{%
+	\shipout\vpack to \pageheight{
+		\hpack to \pagewidth{
+			\vpack to \paperheight{
+				\vskip\topmargin
+				\hpack to \paperwidth{
+					\hskip\dimexpr\leftmargin-\leftintrusion\relax
+					\vpack to \dimexpr\paperheight-\topmargin-\bottommargin\relax{
+						\leaders
+							\vpack{
+								\vskip\interlineskip
+								\hrule width \leftintrusion height \linerulethickness
+							}
+							\vfill
+						\vfil
+					}
+					\vrule width \marginrulethickness height \dimexpr\paperheight-\topmargin-\bottommargin\relax
+					\vpack to \dimexpr\paperheight-\topmargin-\bottommargin\relax{
+						\leaders
+							\vpack{
+								\vskip\interlineskip
+								\hrule width \dimexpr\paperwidth-\leftmargin-\rightmargin-2\marginrulethickness\relax height \linerulethickness
+							}
+							\vfill
+						\vfil
+					}
+					\vrule width \marginrulethickness height \dimexpr\paperheight-\topmargin-\bottommargin\relax
+					\vpack to \dimexpr\paperheight-\topmargin-\bottommargin\relax{
+						\leaders
+							\vpack{
+								\vskip\interlineskip
+								\hrule width \rightintrusion height \linerulethickness
+							}
+							\vfill
+						\vfil
+					}
+					\hskip\dimexpr\rightmargin-\rightintrusion\relax
+				}
+				\vskip\bottommargin
+			}
+			\ifdim\pagewidth>\paperwidth
+				\vrule width 0.4pt height \paperheight
+				\hfil
+			\fi
+		}
+		\ifdim\pageheight>\paperheight
+			\hrule width \paperwidth height 0.4pt
+			\vfil
+		\fi
+	}
+}

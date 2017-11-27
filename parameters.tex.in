@@ -1,0 +1,13 @@
+\pageheight=@PAGE_HEIGHT@
+\pagewidth=@PAGE_WIDTH@
+\paperheight=@PAPER_HEIGHT@
+\paperwidth=@PAPER_WIDTH@
+\topmargin=@MARGINTOP@
+\bottommargin=@MARGINBOTTOM@
+\leftmargin=@MARGINLEFT@
+\rightmargin=@MARGINRIGHT@
+\linerulethickness=@LINERULETHICKNESS@
+\marginrulethickness=@MARGINRULETHICKNESS@
+\interlineskip=@INTERLINESKIP@
+\leftintrusion=@INTRUSION_LEFT@
+\rightintrusion=@INTRUSION_RIGHT@

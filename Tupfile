@@ -1,0 +1,15 @@
+include_rules
+
+
+: |> @(LUATEX) --ini --interaction=nonstopmode @(LUATEX_FLAGS) --jobname=base-@(FORMAT) -- base.ini |> base-@(FORMAT).log base-@(FORMAT).fmt
+
+: |> tup varsed parameters.tex.in %o |> parameters.tex
+
+ifeq (@(FORMAT),dvi)
+	: base-dvi.fmt parameters.tex |> @(LUATEX) --interaction=nonstopmode @(LUATEX_FLAGS) --fmt=base-dvi --jobname=template --output-format=dvi -- main.tex |> template.log template.dvi
+	: template.dvi |> dvips -M* -o %o %f |> %B.ps
+endif
+
+ifeq (@(FORMAT),pdf)
+	: base-pdf.fmt parameters.tex |> @(LUATEX) --interaction=nonstopmode @(LUATEX_FLAGS) --fmt=base-pdf --jobname=template --output-format=pdf -- main.tex |> template.log template.pdf
+endif
