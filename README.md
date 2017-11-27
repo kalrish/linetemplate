@@ -1,4 +1,4 @@
-# linetemplate
+# tex-ruledpaper
 System to produce ruled paper with TeX
 
 This system employs LuaTeX to produce lined paper, which may be used as-is or as a template to write on blank paper. Page size, margins, the different rules' thickness and line spacing might be configured.
