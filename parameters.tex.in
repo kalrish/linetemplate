@@ -1,7 +1,8 @@
-% These dimensions are defined in base.ini.
-% Here, they get set to the values specified in the tup.config. The patterns are replaced by the tup varsed command.
+% These dimensions get set to the values specified in the tup.config. The patterns are replaced by the tup varsed command.
+% These belong to TeX
 \pageheight=@PAGE_HEIGHT@
 \pagewidth=@PAGE_WIDTH@
+% These are defined in base.ini
 \paperheight=@PAPER_HEIGHT@
 \paperwidth=@PAPER_WIDTH@
 \topmargin=@MARGINTOP@
