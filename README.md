@@ -13,7 +13,7 @@ The Tup build system manages the process, which comprises two steps: configurati
 ###  Configuration
 Parameters are specified in the usual way, in a `tup.config` file. You might be interested in using variants.
 
-Examples are provided in the `configs.tup` directory. It should be possible to proceed to the build step by just copying any of them to the root as `tup.config`.
+Examples are provided in the [configs.tup](configs.tup) directory. It should be possible to proceed to the build step by just copying any of them to the root as `tup.config`.
 
 ###  Build
 The build step follows the standard procedure:
